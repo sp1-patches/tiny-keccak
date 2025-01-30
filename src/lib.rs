@@ -149,7 +149,7 @@ mod keccakf;
 ))]
 
 cfg_if::cfg_if! {
-    if #[cfg(all(target_os = "zkvm", target_vendor = "succinct", target_arch = "riscv32"))] {
+    if #[cfg(all(target_os = "zkvm", target_vendor = "succinct"))] {
         mod succinct;
         pub use succinct::keccakf;
     } else {
